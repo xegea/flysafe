@@ -1,5 +1,9 @@
 name: Deploy to GitHub Pages
 
+permissions:
+  contents: write
+  pages: write
+
 on:
   push:
     branches: [ main ]
@@ -11,6 +15,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # ensure full history so gh-pages commit can be created properly
+          fetch-depth: 0
+          # keep credentials so later steps can push using GITHUB_TOKEN
+          persist-credentials: true
 
       - name: Use Node.js 20
         uses: actions/setup-node@v4
