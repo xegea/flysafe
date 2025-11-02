@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:export": "next build",
+  "build:export": "next build",
     "deploy": "npm run build:export && gh-pages -d out",
     "test": "node ./scripts/smoke-check.js"
   },
