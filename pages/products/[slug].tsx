@@ -15,12 +15,12 @@ export default function Product(){
 
   return (
     <div className="container mx-auto px-6 py-8">
-      <div className="card">
+      <div className="bg-white p-6 rounded-lg shadow-sm">
         <h1 className="text-2xl font-bold">{product.title}</h1>
         <p className="text-slate-600 mt-2">{product.desc}</p>
         <p className="mt-4 font-semibold">Price: {product.price}</p>
         <p className="mt-6">
-          <Link href={{ pathname: '/checkout', query: { product: slug } }} className="btn">Buy now</Link>
+          <Link href={{ pathname: '/checkout', query: { product: slug } }} className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Buy now</Link>
         </p>
       </div>
     </div>
