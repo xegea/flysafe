@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "build:export": "next build",
-    "deploy": "npm run build:export && gh-pages -d out"
+    "deploy": "npm run build:export && gh-pages -d out",
+    "test": "jest --color"
   },
   "dependencies": {
     "next": "latest",
@@ -16,14 +17,21 @@
     "react-dom": "latest"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/postcss": "^4.1.16",
+    "@tailwindcss/typography": "^0.5.19",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^30.0.0",
     "@types/node": "^24.9.2",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "autoprefixer": "^10.4.21",
     "gh-pages": "^6.3.0",
+    "jest": "^30.2.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.16",
+    "ts-jest": "^29.4.5",
     "typescript": "latest"
   }
 }

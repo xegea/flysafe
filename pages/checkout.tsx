@@ -23,17 +23,17 @@ export default function Checkout(){
   return (
     <div className="container mx-auto px-6 py-8">
       <h1 className="text-2xl font-bold mb-4">Checkout</h1>
-      <div className="card">
+      <div className="bg-white p-6 rounded-lg shadow-sm">
         <h3 className="text-lg font-semibold">{p.title}</h3>
         <p className="mt-1">Price: <span className="font-medium">{p.price}</span></p>
       </div>
       {!confirmed ? (
         <div className="mt-4">
           <p className="text-slate-600">Enter your details (mock)</p>
-          <button className="btn mt-3" onClick={() => setConfirmed(true)}>Confirm Purchase</button>
+          <button className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md mt-3" onClick={() => setConfirmed(true)}>Confirm Purchase</button>
         </div>
       ) : (
-        <div className="mt-4 card">
+        <div className="mt-4 bg-white p-6 rounded-lg shadow-sm">
           <h3 className="text-lg font-semibold">Thank you</h3>
           <p className="text-slate-600">Your purchase for {p.title} is confirmed (mock).</p>
         </div>
