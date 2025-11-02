@@ -7,15 +7,15 @@ const PRODUCTS = [
 
 export default function Products(){
   return (
-    <div>
-      <h1>Products</h1>
-      <div className="grid">
+    <div className="container mx-auto px-6 py-8">
+      <h1 className="text-2xl font-bold mb-6">Products</h1>
+      <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
         {PRODUCTS.map(p => (
           <div className="card" key={p.id}>
-            <h3>{p.title}</h3>
-            <p className="muted">{p.price}</p>
-            <p style={{marginTop:12}}>
-              <Link href={`/products/${p.id}`}><button className="btn">View</button></Link>
+            <h3 className="text-lg font-semibold">{p.title}</h3>
+            <p className="text-slate-600">{p.price}</p>
+            <p className="mt-4">
+              <Link href={`/products/${p.id}`} className="btn">View</Link>
             </p>
           </div>
         ))}

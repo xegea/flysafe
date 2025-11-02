@@ -11,16 +11,18 @@ export default function Product(){
   const { slug } = router.query as { slug?: string }
   const product = slug ? PRODUCT_DATA[slug] : null
 
-  if(!product) return <div>Product not found</div>
+  if(!product) return <div className="container mx-auto px-6 py-8">Product not found</div>
 
   return (
-    <div>
-      <h1>{product.title}</h1>
-      <p>{product.desc}</p>
-      <p>Price: {product.price}</p>
-      <p style={{marginTop:12}}>
-        <Link href={{ pathname: '/checkout', query: { product: slug } }}><button className="btn">Buy now</button></Link>
-      </p>
+    <div className="container mx-auto px-6 py-8">
+      <div className="card">
+        <h1 className="text-2xl font-bold">{product.title}</h1>
+        <p className="text-slate-600 mt-2">{product.desc}</p>
+        <p className="mt-4 font-semibold">Price: {product.price}</p>
+        <p className="mt-6">
+          <Link href={{ pathname: '/checkout', query: { product: slug } }} className="btn">Buy now</Link>
+        </p>
+      </div>
     </div>
   )
 }
