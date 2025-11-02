@@ -9,13 +9,13 @@ self.__BUILD_MANIFEST = {
     "static/chunks/8f7d84086754848a.js"
   ],
   "/checkout": [
-    "static/chunks/87f751ec14ac316b.js"
+    "static/chunks/3b519d1772224c07.js"
   ],
   "/contact": [
-    "static/chunks/0555f23e84cb8c06.js"
+    "static/chunks/fa20f231c716eace.js"
   ],
   "/products": [
-    "static/chunks/ca6c5ee1cfb0f6be.js"
+    "static/chunks/064a54c062f80948.js"
   ],
   "/products/[slug]": [
     "static/chunks/ded4c7219d39b59e.js"
